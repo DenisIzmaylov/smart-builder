@@ -1,0 +1,21 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-console": 0,                 // http://eslint.org/docs/rules/no-console
+    "func-names": 0,                 // http://eslint.org/docs/rules/func-names
+    "dot-notation": [2, {            // http://eslint.org/docs/rules/dot-notation
+      "allowKeywords": true,
+      "allowPattern": "^([a-z,0-9,_,-]+)$"
+    }],
+    "new-cap": [2, {                 // http://eslint.org/docs/rules/new-cap
+      "newIsCap": true,
+      "capIsNew": false
+    }],
+    "space-before-function-paren": 0 // http://eslint.org/docs/rules/space-before-function-paren
+  }
+}

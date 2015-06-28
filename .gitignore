@@ -1,0 +1,8 @@
+# Keep the order: project, environment, IDE, OS
+dist/
+node_modules/*
+npm-debug.log
+.idea
+*.sublime-project
+*.sublime-workspace
+.DC_Store
