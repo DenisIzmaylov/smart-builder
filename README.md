@@ -1,4 +1,4 @@
-# Gulp Smart Builder
+# [Gulp] Smart Builder
 
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
@@ -7,12 +7,25 @@
 
 ## Overview
 
-Gulp Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide plugins managements is more clear and change aspect from 'which micro-steps and what order should be applied for assets' to 'which assets should be processed and what features should applied to it'.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provides easy declarative configuration based on best practices.
 
 ### Table of Content
-
+ * [Features](#features)
+ * [Installation](#installation)
  * [Quick Start](#quick-start)
  * [Configuration](#configuration)
+ * [Troubleshooting](#troubleshooting)
+
+## Features
+
+Not described yet.
+
+## Installation
+
+Just install to your project through npm:
+```bash
+npm install smart-builder --save-dev
+```
 
 ## Quick Start
 
@@ -37,7 +50,7 @@ Gulp Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs
 import gulp from 'gulp';
 import packageConfig from './package.json';
 import buildConfig from './build.config';
-import SmartBuilder from 'gulp-smart-builder';
+import SmartBuilder from 'smart-builder';
 
 const builder = new SmartBuilder({
   root: __dirname,
@@ -126,3 +139,13 @@ export default config;
 ## Configuration
 
 Not described yet.  
+
+## Troubleshooting
+
+### Watch mode with webpack-dev-server on MacOS X running with high CPU usage
+
+Try to install [fs-events](https://github.com/strongloop/fsevents) module:
+```bash
+npm install fs-events
+```
+
