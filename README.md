@@ -2,9 +2,8 @@
 
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
-> Stop writing a lot code in gulpfile.js for every project.
-> Stop thinking about gulp plugins and its versions.
-> Turn on best practicies in your gulpfile in a few lines with Smart Builder. 
+> Stop search for better gulp plugins and update their versions in every project.
+> Turn on best practicies in a few lines with Smart Builder. 
 > Do it as short as it possible.
 > But use custom logic where you really need it.
 
