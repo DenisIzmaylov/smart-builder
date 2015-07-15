@@ -174,4 +174,4 @@ npm install fs-events
 
 ## TODO
 
- * Look at [Ember CLI](http://www.ember-cli.com/user-guide/) and [LinemanJS](http://linemanjs.com/) to inspire and get useful solutions. Thanks to [Andrey Listochkin](https://github.com/listochkin).
+ * Look at [Ember CLI](http://www.ember-cli.com/user-guide/) and [LinemanJS](http://linemanjs.com/) for inspiration and to get useful solutions. Thanks to [Andrey Listochkin](https://github.com/listochkin).
