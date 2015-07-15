@@ -83,7 +83,7 @@ builder.run();
 
 ## Configuration
 
-It's good practice to store your configuration like `webpack.config.js`:
+It's a good practice to store your configuration in external file (like `webpack.config.js`):
 
 ### smart-builder.config.js
 
