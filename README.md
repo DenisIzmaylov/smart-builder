@@ -8,7 +8,7 @@
 
 ## Overview
 
-Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provides easy declarative configuration based on best practices. Do it as short as it possible.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices. Do it as short as it possible. But use custom logic where you really need it.
 
 ### Table of Content
  * [Features](#features)
