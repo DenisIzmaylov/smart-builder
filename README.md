@@ -108,7 +108,9 @@ const config = {
     changed: true
   },
   webpack: {
+    // Start only when this assets has been processed
     dependencies: ['images', 'styles', 'swf', 'templates'],
+    // Connect external webpack config
     configFile: './webpack.config.js',
     entry: {
       'index': './app-client.js',
