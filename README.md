@@ -18,6 +18,7 @@ Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp
  * [Quick Start](#quick-start)
  * [Configuration](#configuration)
  * [Troubleshooting](#troubleshooting)
+ * [TODO](#TODO)
 
 ## Features
 
@@ -171,3 +172,6 @@ Try to install [fs-events](https://github.com/strongloop/fsevents) module:
 npm install fs-events
 ```
 
+## TODO
+
+ * See [Ember CLI](http://www.ember-cli.com/user-guide/) to inspire and get useful solutions. Thanks to [Andrey Listochkin)[https://github.com/listochkin]
