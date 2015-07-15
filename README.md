@@ -10,7 +10,7 @@
 
 ## Overview
 
-Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices. Configure your favorite environment (PostCSS, template engines, webpack, Browserify, babel, etc) just in 3 minutes.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices. Configure your favorite build environment (PostCSS, template engines, webpack, Browserify, babel, etc) just in 3 minutes.
 
 ### Table of Content
  * [Features](#features)
