@@ -2,12 +2,13 @@
 
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
-> Stop writing big gulpfile for every project!
-> Turn on best practicies in your gulpfile in a few lines with Gulp Smart Builder.
+> Stop writing a lot code in gulpfile.js for every project.
+> Stop thinking about gulp plugins.
+> Turn on best practicies in your gulpfile in a few lines with Smart Builder.
 
 ## Overview
 
-Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provides easy declarative configuration based on best practices.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provides easy declarative configuration based on best practices. Do it as short as it possible.
 
 ### Table of Content
  * [Features](#features)
@@ -92,6 +93,8 @@ import objectAssignDeep from 'object-assign-deep';
 
 const config = {
   images: {
+    // Process only changed files (with compare to destination directory)
+    // implemented by gulp-changed plugin
     changed: true
   },
   styles: {
