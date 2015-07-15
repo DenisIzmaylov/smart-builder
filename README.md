@@ -3,12 +3,14 @@
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
 > Stop writing a lot code in gulpfile.js for every project.
-> Stop thinking about gulp plugins.
-> Turn on best practicies in your gulpfile in a few lines with Smart Builder.
+> Stop thinking about gulp plugins and its versions.
+> Turn on best practicies in your gulpfile in a few lines with Smart Builder. 
+> Do it as short as it possible.
+> But use custom logic where you really need it.
 
 ## Overview
 
-Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices. Do it as short as it possible. But use custom logic where you really need it.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices.
 
 ### Table of Content
  * [Features](#features)
