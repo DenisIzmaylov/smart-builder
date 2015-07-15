@@ -89,7 +89,8 @@ It's a good practice to store your configuration in external file (like `webpack
 
 ```javascript
 import objectAssignDeep from 'object-assign-deep';
-let config = {
+
+const config = {
   images: {
     changed: true
   },
