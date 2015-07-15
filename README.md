@@ -2,7 +2,7 @@
 
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
-> Stop writing big gulpfile for every project! Stop thinking about gulp plugins and dependencies!
+> Stop writing big gulpfile for every project!
 > Turn on best practicies in your gulpfile in a few lines with Gulp Smart Builder.
 
 ## Overview
