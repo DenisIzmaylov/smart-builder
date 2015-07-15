@@ -49,7 +49,6 @@ npm install smart-builder --save-dev
 ```javascript
 import gulp from 'gulp';
 import packageConfig from './package.json';
-import buildConfig from './build.config';
 import SmartBuilder from 'smart-builder';
 
 const builder = new SmartBuilder({
@@ -60,12 +59,33 @@ const builder = new SmartBuilder({
   directories: packageConfig['directories'],
   // `config` should contain a map with asset (plugin name) as a key  
   // and options for this plugin as a value, see build.config.js
-  config: buildConfig
+  config: {
+    images: true,
+    styles: true,
+    templates: true,
+    webpack: {
+      dependencies: ['images', 'styles', 'swf', 'templates'],
+      configFile: './webpack.config.js',
+      entry: {
+        'index': './app-client.js',
+        'server': {
+          target: 'node',
+          file: './app-server.js'
+        }
+      },
+      publicPath: '/assets'
+    }
+  }
 });
+
 builder.run();
 ```
 
-### build.config.js
+## Configuration
+
+It's good practice to store your configuration like `webpack.config.js`:
+
+### smart-builder.config.js
 
 ```javascript
 import objectAssignDeep from 'object-assign-deep';
@@ -135,10 +155,6 @@ if (process.env.NODE_ENV === 'production') {
 
 export default config;
 ```
-
-## Configuration
-
-Not described yet.  
 
 ## Troubleshooting
 
