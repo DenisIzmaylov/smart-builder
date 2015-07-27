@@ -95,6 +95,11 @@ var _factory = function (config) {
         '__SERVER__': JSON.stringify(target !== 'web')
       })
     );
+    if (target === 'web') {
+      current.plugins.push(
+        new webpack.IgnorePlugin(/(fs|dtrace\-provider)/)
+      )
+    }
     if (target === 'node') {
       // PATCH webpack config to use Node.js modules in right way
       // See https://github.com/jlongster/backend-with-webpack

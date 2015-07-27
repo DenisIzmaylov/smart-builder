@@ -1,7 +1,7 @@
 {
   "name": "smart-builder",
   "description": "Do not repeat yourself! Turn on best practicies in your gulpfile in a few lines",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": "https://github.com/DenisIzmaylov/smart-builder",
   "main": "index.js",
   "engines": {
