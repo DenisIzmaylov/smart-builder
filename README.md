@@ -2,12 +2,14 @@
 
 [![Build Status](http://img.shields.io/travis/DenisIzmaylov/gulp-smart-builder/master.svg?style=flat-square)](http://travis-ci.org/DenisIzmaylov/gulp-smart-builder)
 
-> Stop writing big gulpfile for every project!
-> Turn on best practicies in your gulpfile in a few lines with Gulp Smart Builder.
+> Stop search for better gulp plugins and update their versions in every project!
+> Turn on best practicies in a few lines with Smart Builder. 
+> Do it as short as it possible.
+> But use custom logic where you really need it.
 
 ## Overview
 
-Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provides easy declarative configuration based on best practices.
+Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp) which provide easy declarative configuration based on best practices. Configure your favorite build environment (PostCSS, template engines, webpack, Browserify, babel, etc) just in 3 minutes.
 
 ### Table of Content
  * [Features](#features)
@@ -15,6 +17,7 @@ Smart Builder is configuration wrapper for [gulp](https://github.com/gulpjs/gulp
  * [Quick Start](#quick-start)
  * [Configuration](#configuration)
  * [Troubleshooting](#troubleshooting)
+ * [TODO](#TODO)
 
 ## Features
 
@@ -49,7 +52,6 @@ npm install smart-builder --save-dev
 ```javascript
 import gulp from 'gulp';
 import packageConfig from './package.json';
-import buildConfig from './build.config';
 import SmartBuilder from 'smart-builder';
 
 const builder = new SmartBuilder({
@@ -60,17 +62,41 @@ const builder = new SmartBuilder({
   directories: packageConfig['directories'],
   // `config` should contain a map with asset (plugin name) as a key  
   // and options for this plugin as a value, see build.config.js
-  config: buildConfig
+  config: {
+    images: true,
+    styles: true,
+    templates: true,
+    webpack: {
+      dependencies: ['images', 'styles', 'swf', 'templates'],
+      configFile: './webpack.config.js',
+      entry: {
+        'index': './app-client.js',
+        'server': {
+          target: 'node',
+          file: './app-server.js'
+        }
+      },
+      publicPath: '/assets'
+    }
+  }
 });
+
 builder.run();
 ```
 
-### build.config.js
+## Configuration
+
+It's a good practice to store your configuration in external file (like `webpack.config.js`):
+
+### smart-builder.config.js
 
 ```javascript
 import objectAssignDeep from 'object-assign-deep';
-let config = {
+
+const config = {
   images: {
+    // Process only changed files (with compare to destination directory)
+    // implemented by gulp-changed plugin
     changed: true
   },
   styles: {
@@ -81,7 +107,9 @@ let config = {
     changed: true
   },
   webpack: {
+    // Start only when this assets has been processed
     dependencies: ['images', 'styles', 'swf', 'templates'],
+    // Connect external webpack config
     configFile: './webpack.config.js',
     entry: {
       'index': './app-client.js',
@@ -136,10 +164,6 @@ if (process.env.NODE_ENV === 'production') {
 export default config;
 ```
 
-## Configuration
-
-Not described yet.  
-
 ## Troubleshooting
 
 ### Watch mode with webpack-dev-server on MacOS X running with high CPU usage
@@ -149,3 +173,7 @@ Try to install [fs-events](https://github.com/strongloop/fsevents) module:
 npm install fs-events
 ```
 
+## TODO
+ 
+ * Middleware
+ * Look at [Ember CLI](http://www.ember-cli.com/user-guide/) and [LinemanJS](http://linemanjs.com/) for inspiration and to get useful solutions. Thanks to [Andrey Listochkin](https://github.com/listochkin).
