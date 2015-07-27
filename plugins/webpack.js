@@ -97,7 +97,7 @@ var _factory = function (config) {
     );
     if (target === 'web') {
       current.plugins.push(
-        new webpack.IgnorePlugin(/(fs|dtrace\-provider)/)
+        new webpack.IgnorePlugin(/^(fs|dtrace\-provider)$/)
       )
     }
     if (target === 'node') {
